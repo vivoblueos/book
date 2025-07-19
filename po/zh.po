@@ -1,0 +1,784 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: The vivo BlueOS kernel\n"
+"POT-Creation-Date: 2025-07-19T15:48:05+08:00\n"
+"PO-Revision-Date: 2025-07-19T15:48:05+08:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr "摘要"
+
+#: src/SUMMARY.md:3
+msgid "Getting started"
+msgstr "入门"
+
+#: src/SUMMARY.md:7
+msgid "Build and test the kernel"
+msgstr "构建和测试内核"
+
+#: src/SUMMARY.md:8
+msgid "Build the kernel toolchain"
+msgstr "构建内核工具链"
+
+#: src/SUMMARY.md:9
+msgid "Build the kernel"
+msgstr "构建内核"
+
+#: src/SUMMARY.md:10
+msgid "Config rust-analyzer"
+msgstr "配置 rust-analyzer"
+
+#: src/SUMMARY.md:11
+msgid "Use QEMU checker to test"
+msgstr "使用QEMU检查器进行测试"
+
+#: src/SUMMARY.md:12 src/run-coverage.md:1
+msgid "Run Coverage"
+msgstr "运行覆盖率测试"
+
+#: src/SUMMARY.md:14
+msgid "Install the kernel image to devices"
+msgstr "将内核镜像安装到设备"
+
+#: src/SUMMARY.md:16
+msgid "Syscalls"
+msgstr "系统调用"
+
+#: src/SUMMARY.md:17 src/add-new-syscall.md:1
+msgid "Add a new syscall"
+msgstr "添加一个新的syscall"
+
+#: src/SUMMARY.md:18 src/invoke-syscall.md:1
+msgid "Invoke a syscall"
+msgstr "调用一个syscall"
+
+#: src/SUMMARY.md:20
+msgid "Infrastructural data types"
+msgstr "基础设施数据类型"
+
+#: src/SUMMARY.md:21
+msgid "Introduction"
+msgstr "介绍"
+
+#: src/SUMMARY.md:25
+msgid "Contributing"
+msgstr "贡献"
+
+#: src/SUMMARY.md:26
+msgid "Code style guidelines"
+msgstr "代码风格指南"
+
+#: src/SUMMARY.md:27
+msgid "Code of conduct"
+msgstr "行为准则"
+
+#: src/getting-started.md:1
+msgid "Getting Started"
+msgstr "入门"
+
+#: src/getting-started.md:3
+msgid ""
+"We recommend you develop the kernel in Debian-12.0+ or Ubuntu-24.04+ "
+"environment to get the best tool support."
+msgstr "我们建议您在Debian-12.0+或Ubuntu-24.04+环境中开发内核以获得最佳工具支持。"
+
+#: src/getting-started.md:5
+msgid "Prepare basic developement environment"
+msgstr "准备基本的开发环境"
+
+#: src/getting-started.md:6
+msgid "`repo`"
+msgstr "`repo`"
+
+#: src/getting-started.md:7
+msgid ""
+"We are using [repo](https://source.android.com/docs/setup/reference/repo) to"
+" manage the kernel project. Please follow "
+"https://mirrors.tuna.tsinghua.edu.cn/help/git-repo/ to install `repo`."
+msgstr ""
+"我们使用[repo](https://source.android.com/docs/setup/reference/repo)来管理内核项目。请按照https://mirrors.tuna.tsinghua.edu.cn/help/git-"
+"repo/安装`repo`。"
+
+#: src/getting-started.md:10
+msgid "`gn`"
+msgstr "`gn`"
+
+#: src/getting-started.md:11
+msgid ""
+"We are using [GN](https://gn.googlesource.com/gn/) to organize and build the"
+" BlueOS project, rather than [cargo](https://doc.rust-lang.org/cargo/) the "
+"official package manager of Rust eco system. `gn` offers better multi-"
+"language support and better build speed than `cargo`. You can download "
+"prebuilt `gn` binaries from https://gn.googlesource.com/gn/#getting-a-"
+"binary. Put the downloaded binary to a directory and ensure this directory "
+"is in your `${PATH}`."
+msgstr ""
+"我们使用[GN](https://gn.googlesource.com/gn/)来组织和构建BlueOS项目，而不是Rust生态系统的官方包管理器[cargo](https://doc.rust-"
+"lang.org/cargo/)。`gn`提供比`cargo`更好的多语言支持和更快的构建速度。你可以从https://gn.googlesource.com/gn/#getting-"
+"a-binary下载预构建的`gn`二进制文件。将下载的二进制文件放入一个目录，并确保该目录在你的`${PATH}`中。"
+
+#: src/getting-started.md:17
+msgid "Install packages on Linux"
+msgstr "在Linux上安装包"
+
+#: src/getting-started.md:18
+msgid "Install packages shipped by the distro."
+msgstr "安装由发行版提供的软件包。"
+
+#: src/getting-started.md:27
+msgid "Additionally, download and install arm toolchains"
+msgstr "此外，下载并安装arm toolchains"
+
+#: src/getting-started.md:28
+msgid ""
+"```\n"
+"wget https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz\n"
+"tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz -C <install-path>\n"
+"wget https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz\n"
+"tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz -C <install-path>\n"
+"```"
+msgstr ""
+"```\n"
+"wget https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz\n"
+"tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz -C <install-path>\n"
+"wget https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz\n"
+"tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz -C <install-path>\n"
+"```"
+
+#: src/getting-started.md:34
+msgid ""
+"Add `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf/bin`"
+" and `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin` "
+"to your `$PATH`."
+msgstr ""
+"将 `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf/bin` 和"
+" `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin` 添加到你的"
+" `$PATH` 中。"
+
+#: src/getting-started.md:36
+msgid "Install packages on macOS"
+msgstr "在macOS上安装包"
+
+#: src/getting-started.md:40
+msgid ""
+"For aarch64 toolchain, please have a look at [arm-gnu-"
+"toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-"
+"downloads). For RISC-V toolchain on macOS, see [homebrew-"
+"riscv](https://github.com/riscv-software-src/homebrew-riscv?tab=readme-ov-"
+"file)."
+msgstr ""
+"对于aarch64工具链，请查看[arm-gnu-"
+"toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-"
+"downloads)。对于macOS上的RISC-V工具链，请参阅[homebrew-riscv](https://github.com/riscv-"
+"software-src/homebrew-riscv?tab=readme-ov-file)。"
+
+#: src/getting-started.md:43
+msgid "Build and install QEMU"
+msgstr "构建并安装QEMU"
+
+#: src/getting-started.md:44
+msgid "Download QEMU source code tarball,"
+msgstr "下载QEMU源代码tarball，"
+
+#: src/getting-started.md:53
+msgid "Add `<install-path>/bin` to your `$PATH`."
+msgstr "将 `<install-path>/bin` 添加到你的 `$PATH` 中。"
+
+#: src/getting-started.md:55
+msgid "Code formatters"
+msgstr "代码格式化工具"
+
+#: src/getting-started.md:56
+msgid ""
+"We are using code formatters of corresponding programming language to keep "
+"our code style consistent. These formatters can be installed via"
+msgstr "我们使用相应编程语言的代码格式化工具来保持代码风格一致。这些格式化工具可以通过"
+
+#: src/getting-started.md:58
+msgid "# On Linux\n"
+msgstr "# 在Linux上"
+
+#: src/getting-started.md:62
+msgid "# On macOS\n"
+msgstr "# 在 macOS 上"
+
+#: src/getting-started.md:65
+msgid ""
+"Here's the table of format command and its corresponding programming "
+"language."
+msgstr "以下是格式命令及其对应编程语言的表格。"
+
+#: src/getting-started.md:66
+msgid "lang"
+msgstr "语言"
+
+#: src/getting-started.md:66
+msgid "format command"
+msgstr "格式化命令"
+
+#: src/getting-started.md:68
+msgid "Rust"
+msgstr "Rust"
+
+#: src/getting-started.md:68
+msgid "`rustfmt`"
+msgstr "`rustfmt`"
+
+#: src/getting-started.md:69
+msgid "C/C++"
+msgstr "C/C++"
+
+#: src/getting-started.md:69
+msgid "`clang-format`"
+msgstr "`clang-format`"
+
+#: src/getting-started.md:70
+msgid "Python"
+msgstr "Python"
+
+#: src/getting-started.md:70
+msgid "`yapf3`"
+msgstr "`yapf3`"
+
+#: src/getting-started.md:71
+msgid "GN"
+msgstr "GN"
+
+#: src/getting-started.md:71
+msgid "`gn format`"
+msgstr "`gn format`"
+
+#: src/getting-started.md:73
+msgid "Init and sync the project"
+msgstr "初始化和同步项目"
+
+#: src/getting-started.md:74
+msgid "Use following command to init the project."
+msgstr "使用以下命令初始化项目。"
+
+#: src/getting-started.md:80
+msgid "Then sync all repositories in the project."
+msgstr "然后同步项目中的所有仓库。"
+
+#: src/getting-started.md:84
+msgid ""
+"You might accelerate the synchronization by appending `-j$(nproc)` to the "
+"above command."
+msgstr "您可以通过在上面的命令后添加`-j$(nproc)`来加速同步。"
+
+#: src/build-rust-toolchain.md:1
+msgid "Building the Rust toolchain for vivo BlueOS kernel"
+msgstr "为vivo BlueOS内核构建Rust工具链"
+
+#: src/build-rust-toolchain.md:3
+msgid ""
+"We have forked upstream [Rust compiler](https://github.com/rust-"
+"lang/rust.git) to support the vivo BlueOS kernel targeted to `*-vivo-"
+"blueos-*` and vivo BlueOS kernel's Rust-std."
+msgstr ""
+"我们已分叉上游 [Rust 编译器](https://github.com/rust-lang/rust.git) 以支持针对 `*-vivo-"
+"blueos-*` 的 vivo BlueOS 内核及 vivo BlueOS 内核的 Rust-std。"
+
+#: src/build-rust-toolchain.md:6
+msgid ""
+"We'll finally contribute our changes to the upstream repository and make "
+"`*-vivo-blueos-*` a [tier](https://doc.rust-lang.org/rustc/target-tier-"
+"policy.html) Rust target."
+msgstr ""
+"我们最终将我们的更改贡献给上游仓库，并使`*-vivo-blueos-*`成为Rust的[tier](https://doc.rust-"
+"lang.org/rustc/target-tier-policy.html)目标。"
+
+#: src/build-rust-toolchain.md:9
+msgid "Clone the downstream repository"
+msgstr "克隆下游仓库"
+
+#: src/build-rust-toolchain.md:10
+msgid "Run"
+msgstr "运行"
+
+#: src/build-rust-toolchain.md:16
+msgid ""
+"The `blueos-dev` branch is set as default, so no manual branch switching is "
+"required."
+msgstr "`blueos-dev` 分支已设置为默认，因此无需手动切换分支。"
+
+#: src/build-rust-toolchain.md:18
+msgid "Setup Rust mirror site"
+msgstr "设置Rust镜像站点"
+
+#: src/build-rust-toolchain.md:19
+msgid ""
+"In China, we recommend you to use mirror site for `crates.io` and `rustup`. "
+"Add following lines to your `~/.bashrc`"
+msgstr "在中国，我们推荐你使用 `crates.io` 和 `rustup` 的镜像站点。将以下行添加到你的 `~/.bashrc`"
+
+#: src/build-rust-toolchain.md:20
+msgid ""
+"```\n"
+"export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static\n"
+"export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup\n"
+"```"
+msgstr ""
+"```\n"
+"export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static\n"
+"export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup\n"
+"```"
+
+#: src/build-rust-toolchain.md:24
+msgid "and then type"
+msgstr "然后输入"
+
+#: src/build-rust-toolchain.md:29
+msgid "Install via `x` script"
+msgstr "通过 `x` 脚本安装"
+
+#: src/build-rust-toolchain.md:30
+msgid ""
+"Run the following commands in your bash shell. These instructions work for "
+"both Linux and macOS platforms:"
+msgstr "在您的bash shell中运行以下命令。这些指令适用于Linux和macOS平台："
+
+#: src/build-rust-toolchain.md:32
+msgid "true"
+msgstr "true"
+
+#: src/build-rust-toolchain.md:33
+msgid "<choose-your-install-prefix>"
+msgstr "<选择您的安装前缀>"
+
+#: src/build-rust-toolchain.md:49
+msgid ""
+"You must also install the host machine's standard library and LLVM tools."
+msgstr "您还必须安装主机的标准库和LLVM工具。"
+
+#: src/build-rust-toolchain.md:51
+msgid "For Linux:"
+msgstr "对于Linux："
+
+#: src/build-rust-toolchain.md:57
+msgid "For macOS:"
+msgstr "对于macOS："
+
+#: src/build-rust-toolchain.md:63
+msgid "To use the kernel toolchain, add the following to your environment:"
+msgstr "要使用内核工具链，请将以下内容添加到您的环境中："
+
+#: src/build-rust-toolchain.md:65
+msgid "${DESTDIR}/usr/local/bin:${PATH}"
+msgstr "${DESTDIR}/usr/local/bin:${PATH}"
+
+#: src/build-kernel.md:1
+msgid "Build kernel image"
+msgstr "构建内核镜像"
+
+#: src/build-kernel.md:3
+msgid "The kernel currently supports multiple boards."
+msgstr "内核目前支持多种板子。"
+
+#: src/build-kernel.md:5
+msgid "qemu_mps2_an385"
+msgstr "qemu_mps2_an385"
+
+#: src/build-kernel.md:6
+msgid "qemu_mps3_an547"
+msgstr "qemu_mps3_an547"
+
+#: src/build-kernel.md:7
+msgid "qemu_virt64_aarch64"
+msgstr "qemu_virt64_aarch64"
+
+#: src/build-kernel.md:8
+msgid "qemu_riscv64"
+msgstr "qemu_riscv64"
+
+#: src/build-kernel.md:10
+msgid ""
+"To build a kernel image for specified board, like `qemu_mps2_an385`, use "
+"command"
+msgstr "为指定板（如 `qemu_mps2_an385`）构建内核镜像，使用命令"
+
+#: src/build-kernel.md:11
+msgid ""
+"```\n"
+"gn gen out/qemu_mps2_an385.release/ --args='build_type=\"release\" board=\"qemu_mps2_an385\"'\n"
+"ninja -C out/qemu_mps2_an385.release\n"
+"```"
+msgstr ""
+"```\n"
+"gn gen out/qemu_mps2_an385.release/ --args='build_type=\"release\" board=\"qemu_mps2_an385\"'\n"
+"ninja -C out/qemu_mps2_an385.release\n"
+"```"
+
+#: src/build-kernel.md:15
+msgid "To run tests, type"
+msgstr "要运行测试，输入"
+
+#: src/build-kernel.md:20
+msgid "Args and their semantics."
+msgstr "参数及其语义。"
+
+#: src/build-kernel.md:21
+msgid "arg"
+msgstr "参数"
+
+#: src/build-kernel.md:21
+msgid "semantics"
+msgstr "语义"
+
+#: src/build-kernel.md:23
+msgid "build_type"
+msgstr "构建类型"
+
+#: src/build-kernel.md:23
+msgid "debug/ release/ coverage/ profile"
+msgstr "debug/ release/ coverage/ profile"
+
+#: src/build-kernel.md:24
+msgid "board"
+msgstr "板"
+
+#: src/build-kernel.md:24
+msgid "Name of the board targeted to"
+msgstr "目标板名称"
+
+#: src/config-rust-analyzer.md:1
+msgid "Use rust-analyzer in VSCode"
+msgstr "在VSCode中使用rust-analyzer"
+
+#: src/config-rust-analyzer.md:3
+msgid ""
+"We recommend you to use rust-analyzer extension in VSCode to support "
+"development of the vivo BlueOS kernel."
+msgstr "我们推荐您在VSCode中使用rust-analyzer扩展以支持vivo BlueOS内核的开发。"
+
+#: src/config-rust-analyzer.md:5
+msgid ""
+"However, since we are using `gn`, rather than `Cargo.toml`, to manage our "
+"project, the rust-analyzer extension in VSCode might not work out-of-box. "
+"You should use following commands[^1] to get the extension work"
+msgstr ""
+"然而，由于我们使用`gn`而非`Cargo.toml`来管理项目，VSCode中的rust-"
+"analyzer扩展可能无法开箱即用。你应该使用以下命令[^1]来使扩展正常工作"
+
+#: src/config-rust-analyzer.md:11
+msgid ""
+"https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/rust.md#using-"
+"vscode"
+msgstr ""
+"https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/rust.md#使用-"
+"vscode"
+
+#: src/qemu-checker.md:1
+msgid "QEMU checker"
+msgstr "QEMU检查器"
+
+#: src/qemu-checker.md:3
+msgid ""
+"Most kernel code are tested via QEMU. We introduce QEMU checker to assist "
+"testing the kernel."
+msgstr "大多数内核代码通过QEMU进行测试。我们引入QEMU检查器以协助测试内核。"
+
+#: src/qemu-checker.md:6
+msgid ""
+"QEMU checker must be provided with a QEMU runner script and a input file "
+"containing check directives.  QEMU checker runs the runner script and "
+"captures output lines of it. If output lines match conditions or regex "
+"specified in the check directives, the checker takes corresponding actions. "
+"Directives should be written at the header of the input file."
+msgstr ""
+"QEMU检查器必须提供一个QEMU运行脚本和一个包含检查指令的输入文件。QEMU检查器运行该脚本并捕获其输出行。如果输出行匹配检查指令中指定的条件或正则表达式，检查器将采取相应操作。指令应写在输入文件的头部。"
+
+#: src/qemu-checker.md:14
+msgid "directive"
+msgstr "指令"
+
+#: src/qemu-checker.md:14
+msgid "action"
+msgstr "动作"
+
+#: src/qemu-checker.md:16
+msgid "// CHECK-FAIL: \\<regex\\>"
+msgstr "// 检查-失败: \\<regex\\>"
+
+#: src/qemu-checker.md:16 src/qemu-checker.md:17
+msgid "Record this line and report at exit."
+msgstr "记录此行并在退出时报告。"
+
+#: src/qemu-checker.md:17
+msgid "// CHECK-SUCC: \\<regex\\>"
+msgstr "// 检查-成功: \\<regex\\>"
+
+#: src/qemu-checker.md:18
+msgid "// ASSERT-FAIL: \\<regex\\>"
+msgstr "// 断言失败：\\<regex\\>"
+
+#: src/qemu-checker.md:18
+msgid "Exit the runner and report failure."
+msgstr "退出 runner 并报告失败。"
+
+#: src/qemu-checker.md:19
+msgid "// ASSERT-SUCC: \\<regex\\>"
+msgstr "// 断言-成功: \\<regex\\>"
+
+#: src/qemu-checker.md:19
+msgid "Exit the runner and report success."
+msgstr "退出 runner 并报告成功。"
+
+#: src/qemu-checker.md:20
+msgid "// NEWLINE-TIMEOUT: \\<number\\>"
+msgstr "// 新建行超时: \\<数字\\>"
+
+#: src/qemu-checker.md:20
+msgid ""
+"Timeout when checker reads the next line. Report failure if timeout occurs."
+msgstr "检查器读取下一行时超时。如果发生超时，报告失败。"
+
+#: src/qemu-checker.md:21
+msgid "// TOTAL-TIMEOUT: \\<number\\>"
+msgstr "// 总超时: \\<数字\\>"
+
+#: src/qemu-checker.md:21
+msgid "Total timeout for this run."
+msgstr "本次运行的总超时时间。"
+
+#: src/qemu-checker.md:23
+msgid "Example"
+msgstr "例子"
+
+#: src/qemu-checker.md:24
+msgid ""
+"Suppose we have a kernel image for testing, named `blueos_foo_test`. First "
+"we have to generate a qemu runner script for it."
+msgstr "假设我们有一个用于测试的内核镜像，名为`blueos_foo_test`。首先我们需要为它生成一个qemu运行脚本。"
+
+#: src/qemu-checker.md:26
+msgid ""
+"```gn\n"
+"gen_qemu_runner(\"runner_for_blueos_foo_test\") {\n"
+"  img = \":blueos_foo_test\"\n"
+"  qemu = \"$qemu_exe\"\n"
+"  board = \"$board\"\n"
+"}\n"
+"```"
+msgstr ""
+"```gn\n"
+"gen_qemu_runner(\"runner_for_blueos_foo_test\") {\n"
+"  img = \":blueos_foo_test\"\n"
+"  qemu = \"$qemu_exe\"\n"
+"  board = \"$board\"\n"
+"}\n"
+"```"
+
+#: src/qemu-checker.md:33
+msgid "Then, we make a checker for the above runner."
+msgstr "然后，我们为上述runner制作一个checker。"
+
+#: src/qemu-checker.md:34
+msgid ""
+"```gn\n"
+"run_qemu_checker(\"check_blueos_foo_test\") {\n"
+"  img = \":blueos_foo_test\"\n"
+"  runner = \":runner_for_blueos_foo_test\"\n"
+"  checker = \"//kernel/kernel/tests/integration_test.rs\"\n"
+"}\n"
+"```"
+msgstr ""
+"```gn\n"
+"run_qemu_checker(\"check_blueos_foo_test\") {\n"
+"  img = \":blueos_foo_test\"\n"
+"  runner = \":runner_for_blueos_foo_test\"\n"
+"  checker = \"//kernel/kernel/tests/integration_test.rs\"\n"
+"}\n"
+"```"
+
+#: src/qemu-checker.md:41
+msgid ""
+"Must be noted, the above two targets must be put in the same `BUILD.gn`. "
+"Check directives should be put at the header of `integration_test.rs`."
+msgstr "必须指出，上述两个目标必须放在同一个 `BUILD.gn` 中。检查指令应放在 `integration_test.rs` 的头部。"
+
+#: src/qemu-checker.md:44
+msgid ""
+"// NEWLINE-TIMEOUT: 15\n"
+"// ASSERT-SUCC: Kernel test end.\n"
+"// ASSERT-FAIL: Backtrace in Panic.*\n"
+msgstr ""
+"// NEWLINE-TIMEOUT: 15  \n"
+"// ASSERT-SUCC: 内核测试结束。  \n"
+"// ASSERT-FAIL: 崩溃回溯信息：Panic.*"
+
+#: src/qemu-checker.md:49
+msgid "Integrate checks in CI"
+msgstr "在CI中集成检查"
+
+#: src/qemu-checker.md:50
+msgid ""
+"CI runner only runs two toplevel targets, `default` and `check_all`. To run "
+"check during CI, you have to put your checker target in `deps` of "
+"`check_all` group in the toplevel `BUILD.gn`."
+msgstr ""
+"CI runner 仅运行两个顶层目标，`default` 和 `check_all`。要在 CI 期间运行检查，你必须将你的检查器目标放入顶层 "
+"`BUILD.gn` 中 `check_all` 组的 `deps` 里。"
+
+#: src/qemu-checker.md:53
+msgid ""
+"```gn\n"
+"group(\"check_all\") {\n"
+"  deps = [ \":check_kernel\" ]\n"
+"}\n"
+"```"
+msgstr ""
+"```gn\n"
+"group(\"check_all\") {\n"
+"  deps = [ \":check_kernel\" ]\n"
+"}\n"
+"```"
+
+#: src/run-coverage.md:3
+msgid ""
+"We generate the code needed for coverage statistics by adding `-Cinstrument-"
+"coverage` during compilation, and generate coverage data through the "
+"integration of [minicov](https://crates.io/crates/minicov) and "
+"[semihosting](https://crates.io/crates/semihosting). Finally, we use the "
+"[grcov](https://crates.io/crates/grcov) tool to generate readable coverage "
+"data in HTML format. All of these have been integrated into our build "
+"system, and coverage data can be generated using the following commands："
+msgstr ""
+"我们在编译时通过添加`-Cinstrument-"
+"coverage`来生成覆盖率统计所需的代码，并通过集成[minicov](https://crates.io/crates/minicov)和[semihosting](https://crates.io/crates/semihosting)来生成覆盖率数据。最后，我们使用[grcov](https://crates.io/crates/grcov)工具生成可读的HTML格式覆盖率数据。所有这些都已集成到我们的构建系统中，可以使用以下命令生成覆盖率数据："
+
+#: src/run-coverage.md:6
+msgid "'build_type=\"coverage\" board=\"qemu_riscv64\"'"
+msgstr "build_type=\"coverage\" board=\"qemu_riscv64\""
+
+#: src/run-coverage.md:10
+msgid "If you get a prompt that grcov is not found, you can install it via"
+msgstr "如果你收到提示说grcov未找到，可以通过"
+
+#: src/run-coverage.md:15
+msgid ""
+"After building and running, you can find merged coverage report in the "
+"`./out/qemu_riscv64.cov/cov_report` directory. Open the `index.html` file in"
+" the directory to view the coverage data."
+msgstr ""
+"构建并运行后，可以在 `./out/qemu_riscv64.cov/cov_report` 目录中找到合并的覆盖率报告。打开该目录中的 "
+"`index.html` 文件以查看覆盖率数据。"
+
+#: src/add-new-syscall.md:3
+msgid "Adding a new syscall in the kernel is easy."
+msgstr "在内核中添加一个新的syscall很容易。"
+
+#: src/add-new-syscall.md:5
+msgid "There are 3 steps."
+msgstr "有3个步骤。"
+
+#: src/add-new-syscall.md:7
+msgid ""
+"Add new syscall number for the new syscall in `header/src/syscalls.rs`."
+msgstr "在 `header/src/syscalls.rs` 中为新的系统调用添加新的系统调用编号。"
+
+#: src/add-new-syscall.md:14
+msgid "Implement the new syscall in `kernel/src/syscall_handlers/mod.rs`."
+msgstr "在`kernel/src/syscall_handlers/mod.rs`中实现新的syscall。"
+
+#: src/add-new-syscall.md:16
+msgid ""
+"This is generally done via `define_syscall_handler!` if the syscall is "
+"trivial. For example"
+msgstr "这通常通过`define_syscall_handler!`完成，如果系统调用是简单的。例如"
+
+#: src/add-new-syscall.md:20
+msgid "// Implement your vfs read.\n"
+msgstr "// 实现你的 vfs 读取。"
+
+#: src/add-new-syscall.md:24
+msgid "Register the new syscall in `kernel/src/syscall_handlers/mod.rs`."
+msgstr "在`kernel/src/syscall_handlers/mod.rs`中注册新的syscall。"
+
+#: src/add-new-syscall.md:26
+msgid "Add a new entry in `syscall_table!`. For example,"
+msgstr "在 `syscall_table!` 中添加一个新条目。例如，"
+
+#: src/add-new-syscall.md:30
+msgid ""
+"Must be noted, the first operand **MUST** be the unqualified name of the "
+"`NR` enumeration."
+msgstr "必须注意，第一个操作数**必须**是 `NR` 枚举的非限定名称。"
+
+#: src/invoke-syscall.md:3
+msgid "The vivo BlueOS kernel offers two modes of invoking syscall."
+msgstr "vivo BlueOS内核提供两种调用syscall的模式。"
+
+#: src/invoke-syscall.md:5
+msgid "Software interruption"
+msgstr "软件中断"
+
+#: src/invoke-syscall.md:7
+msgid ""
+"This is generally seen in most OS kernels to switch from user space to "
+"kernel space."
+msgstr "这通常见于大多数OS内核中，用于从用户空间切换到内核空间。"
+
+#: src/invoke-syscall.md:9
+msgid "Direct invoking"
+msgstr "直接调用"
+
+#: src/invoke-syscall.md:11
+msgid ""
+"In this mode, syscall handlers are invoked directly via function calls."
+msgstr "在此模式下，syscall处理程序通过函数调用直接调用。"
+
+#: src/invoke-syscall.md:13
+msgid ""
+"In both modes, if you have to invoke a syscall, use the `bk_syscall!` macro "
+"in `blueos_scal` crate. For example,"
+msgstr "在两种模式下，如果需要调用syscall，请使用`blueos_scal` crate中的`bk_syscall!`宏。例如，"
+
+#: src/invoke-syscall.md:23
+msgid ""
+"There is no need to change your code when switching to another mode. By "
+"default, SWI mode is used. If you want to use the direct invoking mode, what"
+" you have to do is passing `--cfg direct_syscall_handler` to build the "
+"kernel."
+msgstr ""
+"切换到另一种模式时无需更改代码。默认使用SWI模式。如需使用直接调用模式，只需在构建内核时传入`--cfg "
+"direct_syscall_handler`即可。"
+
+#: src/infra-data-types.md:1
+msgid "Kernel's basic data types"
+msgstr "内核的基本数据类型"
+
+#: src/infra-data-types.md:3
+msgid "Arc"
+msgstr "弧"
+
+#: src/infra-data-types.md:4
+msgid ""
+"A customized `Arc`(`infra/src/tinyarc.rs`), is implemented for the kernel. "
+"Compared to `alloc::sync::Arc`, there is no much difference, except it has "
+"only `strong_count` thus reduced its size and is friendly to embedded "
+"deivces. Also its memory layout is known to `blueos_infra`, so our "
+"instrusive list can cooperate with it easily."
+msgstr ""
+"为内核实现了一个定制的`Arc`(`infra/src/tinyarc.rs`)。与`alloc::sync::Arc`相比，差异不大，只是它仅有`strong_count`因而减小了体积，对嵌入式设备更友好。此外其内存布局对`blueos_infra`是已知的，因此我们的侵入式链表可以轻松与之协作。"
+
+#: src/infra-data-types.md:12
+msgid "Intrusive list"
+msgstr "侵入式列表"
+
+#: src/infra-data-types.md:13
+msgid ""
+"`blueos_infra`'s ilist(`infra/src/list/typed_ilist.rs`) is typed and unsafe."
+" It's like C-style's ilist, however we recommend developers not using it "
+"directly but with smart pointers. We implement `ArcList` ontop of the typed "
+"ilst with `Arc` mentioned above and guarantees safety."
+msgstr ""
+"`blueos_infra`的ilist(`infra/src/list/typed_ilist.rs`)是类型化且不安全的。它类似于C风格的ilist，但我们建议开发者不要直接使用它，而是使用智能指针。我们在上述提到的`Arc`基础上实现了`ArcList`，并保证了安全性。"

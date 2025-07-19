@@ -1,0 +1,717 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: The vivo BlueOS kernel\n"
+"POT-Creation-Date: 2025-07-19T15:48:05+08:00\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Getting started"
+msgstr ""
+
+#: src/SUMMARY.md:7
+msgid "Build and test the kernel"
+msgstr ""
+
+#: src/SUMMARY.md:8
+msgid "Build the kernel toolchain"
+msgstr ""
+
+#: src/SUMMARY.md:9
+msgid "Build the kernel"
+msgstr ""
+
+#: src/SUMMARY.md:10
+msgid "Config rust-analyzer"
+msgstr ""
+
+#: src/SUMMARY.md:11
+msgid "Use QEMU checker to test"
+msgstr ""
+
+#: src/SUMMARY.md:12 src/run-coverage.md:1
+msgid "Run Coverage"
+msgstr ""
+
+#: src/SUMMARY.md:14
+msgid "Install the kernel image to devices"
+msgstr ""
+
+#: src/SUMMARY.md:16
+msgid "Syscalls"
+msgstr ""
+
+#: src/SUMMARY.md:17 src/add-new-syscall.md:1
+msgid "Add a new syscall"
+msgstr ""
+
+#: src/SUMMARY.md:18 src/invoke-syscall.md:1
+msgid "Invoke a syscall"
+msgstr ""
+
+#: src/SUMMARY.md:20
+msgid "Infrastructural data types"
+msgstr ""
+
+#: src/SUMMARY.md:21
+msgid "Introduction"
+msgstr ""
+
+#: src/SUMMARY.md:25
+msgid "Contributing"
+msgstr ""
+
+#: src/SUMMARY.md:26
+msgid "Code style guidelines"
+msgstr ""
+
+#: src/SUMMARY.md:27
+msgid "Code of conduct"
+msgstr ""
+
+#: src/getting-started.md:1
+msgid "Getting Started"
+msgstr ""
+
+#: src/getting-started.md:3
+msgid ""
+"We recommend you develop the kernel in Debian-12.0+ or Ubuntu-24.04+ "
+"environment to get the best tool support."
+msgstr ""
+
+#: src/getting-started.md:5
+msgid "Prepare basic developement environment"
+msgstr ""
+
+#: src/getting-started.md:6
+msgid "`repo`"
+msgstr ""
+
+#: src/getting-started.md:7
+msgid ""
+"We are using [repo](https://source.android.com/docs/setup/reference/repo) to "
+"manage the kernel project. Please follow "
+"https://mirrors.tuna.tsinghua.edu.cn/help/git-repo/ to install `repo`."
+msgstr ""
+
+#: src/getting-started.md:10
+msgid "`gn`"
+msgstr ""
+
+#: src/getting-started.md:11
+msgid ""
+"We are using [GN](https://gn.googlesource.com/gn/) to organize and build the "
+"BlueOS project, rather than [cargo](https://doc.rust-lang.org/cargo/) the "
+"official package manager of Rust eco system. `gn` offers better "
+"multi-language support and better build speed than `cargo`. You can download "
+"prebuilt `gn` binaries from "
+"https://gn.googlesource.com/gn/#getting-a-binary. Put the downloaded binary "
+"to a directory and ensure this directory is in your `${PATH}`."
+msgstr ""
+
+#: src/getting-started.md:17
+msgid "Install packages on Linux"
+msgstr ""
+
+#: src/getting-started.md:18
+msgid "Install packages shipped by the distro."
+msgstr ""
+
+#: src/getting-started.md:27
+msgid "Additionally, download and install arm toolchains"
+msgstr ""
+
+#: src/getting-started.md:28
+msgid ""
+"```\n"
+"wget "
+"https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz\n"
+"tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz -C "
+"<install-path>\n"
+"wget "
+"https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz\n"
+"tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz -C "
+"<install-path>\n"
+"```"
+msgstr ""
+
+#: src/getting-started.md:34
+msgid ""
+"Add `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf/bin` "
+"and `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin` to "
+"your `$PATH`."
+msgstr ""
+
+#: src/getting-started.md:36
+msgid "Install packages on macOS"
+msgstr ""
+
+#: src/getting-started.md:40
+msgid ""
+"For aarch64 toolchain, please have a look at "
+"[arm-gnu-toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads). "
+"For RISC-V toolchain on macOS, see "
+"[homebrew-riscv](https://github.com/riscv-software-src/homebrew-riscv?tab=readme-ov-file)."
+msgstr ""
+
+#: src/getting-started.md:43
+msgid "Build and install QEMU"
+msgstr ""
+
+#: src/getting-started.md:44
+msgid "Download QEMU source code tarball,"
+msgstr ""
+
+#: src/getting-started.md:53
+msgid "Add `<install-path>/bin` to your `$PATH`."
+msgstr ""
+
+#: src/getting-started.md:55
+msgid "Code formatters"
+msgstr ""
+
+#: src/getting-started.md:56
+msgid ""
+"We are using code formatters of corresponding programming language to keep "
+"our code style consistent. These formatters can be installed via"
+msgstr ""
+
+#: src/getting-started.md:58
+msgid "# On Linux\n"
+msgstr ""
+
+#: src/getting-started.md:62
+msgid "# On macOS\n"
+msgstr ""
+
+#: src/getting-started.md:65
+msgid ""
+"Here's the table of format command and its corresponding programming "
+"language."
+msgstr ""
+
+#: src/getting-started.md:66
+msgid "lang"
+msgstr ""
+
+#: src/getting-started.md:66
+msgid "format command"
+msgstr ""
+
+#: src/getting-started.md:68
+msgid "Rust"
+msgstr ""
+
+#: src/getting-started.md:68
+msgid "`rustfmt`"
+msgstr ""
+
+#: src/getting-started.md:69
+msgid "C/C++"
+msgstr ""
+
+#: src/getting-started.md:69
+msgid "`clang-format`"
+msgstr ""
+
+#: src/getting-started.md:70
+msgid "Python"
+msgstr ""
+
+#: src/getting-started.md:70
+msgid "`yapf3`"
+msgstr ""
+
+#: src/getting-started.md:71
+msgid "GN"
+msgstr ""
+
+#: src/getting-started.md:71
+msgid "`gn format`"
+msgstr ""
+
+#: src/getting-started.md:73
+msgid "Init and sync the project"
+msgstr ""
+
+#: src/getting-started.md:74
+msgid "Use following command to init the project."
+msgstr ""
+
+#: src/getting-started.md:80
+msgid "Then sync all repositories in the project."
+msgstr ""
+
+#: src/getting-started.md:84
+msgid ""
+"You might accelerate the synchronization by appending `-j$(nproc)` to the "
+"above command."
+msgstr ""
+
+#: src/build-rust-toolchain.md:1
+msgid "Building the Rust toolchain for vivo BlueOS kernel"
+msgstr ""
+
+#: src/build-rust-toolchain.md:3
+msgid ""
+"We have forked upstream [Rust "
+"compiler](https://github.com/rust-lang/rust.git) to support the vivo BlueOS "
+"kernel targeted to `*-vivo-blueos-*` and vivo BlueOS kernel's Rust-std."
+msgstr ""
+
+#: src/build-rust-toolchain.md:6
+msgid ""
+"We'll finally contribute our changes to the upstream repository and make "
+"`*-vivo-blueos-*` a "
+"[tier](https://doc.rust-lang.org/rustc/target-tier-policy.html) Rust target."
+msgstr ""
+
+#: src/build-rust-toolchain.md:9
+msgid "Clone the downstream repository"
+msgstr ""
+
+#: src/build-rust-toolchain.md:10
+msgid "Run"
+msgstr ""
+
+#: src/build-rust-toolchain.md:16
+msgid ""
+"The `blueos-dev` branch is set as default, so no manual branch switching is "
+"required."
+msgstr ""
+
+#: src/build-rust-toolchain.md:18
+msgid "Setup Rust mirror site"
+msgstr ""
+
+#: src/build-rust-toolchain.md:19
+msgid ""
+"In China, we recommend you to use mirror site for `crates.io` and `rustup`. "
+"Add following lines to your `~/.bashrc`"
+msgstr ""
+
+#: src/build-rust-toolchain.md:20
+msgid ""
+"```\n"
+"export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static\n"
+"export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup\n"
+"```"
+msgstr ""
+
+#: src/build-rust-toolchain.md:24
+msgid "and then type"
+msgstr ""
+
+#: src/build-rust-toolchain.md:29
+msgid "Install via `x` script"
+msgstr ""
+
+#: src/build-rust-toolchain.md:30
+msgid ""
+"Run the following commands in your bash shell. These instructions work for "
+"both Linux and macOS platforms:"
+msgstr ""
+
+#: src/build-rust-toolchain.md:32
+msgid "true"
+msgstr ""
+
+#: src/build-rust-toolchain.md:33
+msgid "<choose-your-install-prefix>"
+msgstr ""
+
+#: src/build-rust-toolchain.md:49
+msgid "You must also install the host machine's standard library and LLVM tools."
+msgstr ""
+
+#: src/build-rust-toolchain.md:51
+msgid "For Linux:"
+msgstr ""
+
+#: src/build-rust-toolchain.md:57
+msgid "For macOS:"
+msgstr ""
+
+#: src/build-rust-toolchain.md:63
+msgid "To use the kernel toolchain, add the following to your environment:"
+msgstr ""
+
+#: src/build-rust-toolchain.md:65
+msgid "${DESTDIR}/usr/local/bin:${PATH}"
+msgstr ""
+
+#: src/build-kernel.md:1
+msgid "Build kernel image"
+msgstr ""
+
+#: src/build-kernel.md:3
+msgid "The kernel currently supports multiple boards."
+msgstr ""
+
+#: src/build-kernel.md:5
+msgid "qemu_mps2_an385"
+msgstr ""
+
+#: src/build-kernel.md:6
+msgid "qemu_mps3_an547"
+msgstr ""
+
+#: src/build-kernel.md:7
+msgid "qemu_virt64_aarch64"
+msgstr ""
+
+#: src/build-kernel.md:8
+msgid "qemu_riscv64"
+msgstr ""
+
+#: src/build-kernel.md:10
+msgid ""
+"To build a kernel image for specified board, like `qemu_mps2_an385`, use "
+"command"
+msgstr ""
+
+#: src/build-kernel.md:11
+msgid ""
+"```\n"
+"gn gen out/qemu_mps2_an385.release/ --args='build_type=\"release\" "
+"board=\"qemu_mps2_an385\"'\n"
+"ninja -C out/qemu_mps2_an385.release\n"
+"```"
+msgstr ""
+
+#: src/build-kernel.md:15
+msgid "To run tests, type"
+msgstr ""
+
+#: src/build-kernel.md:20
+msgid "Args and their semantics."
+msgstr ""
+
+#: src/build-kernel.md:21
+msgid "arg"
+msgstr ""
+
+#: src/build-kernel.md:21
+msgid "semantics"
+msgstr ""
+
+#: src/build-kernel.md:23
+msgid "build_type"
+msgstr ""
+
+#: src/build-kernel.md:23
+msgid "debug/ release/ coverage/ profile"
+msgstr ""
+
+#: src/build-kernel.md:24
+msgid "board"
+msgstr ""
+
+#: src/build-kernel.md:24
+msgid "Name of the board targeted to"
+msgstr ""
+
+#: src/config-rust-analyzer.md:1
+msgid "Use rust-analyzer in VSCode"
+msgstr ""
+
+#: src/config-rust-analyzer.md:3
+msgid ""
+"We recommend you to use rust-analyzer extension in VSCode to support "
+"development of the vivo BlueOS kernel."
+msgstr ""
+
+#: src/config-rust-analyzer.md:5
+msgid ""
+"However, since we are using `gn`, rather than `Cargo.toml`, to manage our "
+"project, the rust-analyzer extension in VSCode might not work out-of-box. "
+"You should use following commands[^1] to get the extension work"
+msgstr ""
+
+#: src/config-rust-analyzer.md:11
+msgid ""
+"https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/rust.md#using-vscode"
+msgstr ""
+
+#: src/qemu-checker.md:1
+msgid "QEMU checker"
+msgstr ""
+
+#: src/qemu-checker.md:3
+msgid ""
+"Most kernel code are tested via QEMU. We introduce QEMU checker to assist "
+"testing the kernel."
+msgstr ""
+
+#: src/qemu-checker.md:6
+msgid ""
+"QEMU checker must be provided with a QEMU runner script and a input file "
+"containing check directives.  QEMU checker runs the runner script and "
+"captures output lines of it. If output lines match conditions or regex "
+"specified in the check directives, the checker takes corresponding actions. "
+"Directives should be written at the header of the input file."
+msgstr ""
+
+#: src/qemu-checker.md:14
+msgid "directive"
+msgstr ""
+
+#: src/qemu-checker.md:14
+msgid "action"
+msgstr ""
+
+#: src/qemu-checker.md:16
+msgid "// CHECK-FAIL: \\<regex\\>"
+msgstr ""
+
+#: src/qemu-checker.md:16 src/qemu-checker.md:17
+msgid "Record this line and report at exit."
+msgstr ""
+
+#: src/qemu-checker.md:17
+msgid "// CHECK-SUCC: \\<regex\\>"
+msgstr ""
+
+#: src/qemu-checker.md:18
+msgid "// ASSERT-FAIL: \\<regex\\>"
+msgstr ""
+
+#: src/qemu-checker.md:18
+msgid "Exit the runner and report failure."
+msgstr ""
+
+#: src/qemu-checker.md:19
+msgid "// ASSERT-SUCC: \\<regex\\>"
+msgstr ""
+
+#: src/qemu-checker.md:19
+msgid "Exit the runner and report success."
+msgstr ""
+
+#: src/qemu-checker.md:20
+msgid "// NEWLINE-TIMEOUT: \\<number\\>"
+msgstr ""
+
+#: src/qemu-checker.md:20
+msgid ""
+"Timeout when checker reads the next line. Report failure if timeout occurs."
+msgstr ""
+
+#: src/qemu-checker.md:21
+msgid "// TOTAL-TIMEOUT: \\<number\\>"
+msgstr ""
+
+#: src/qemu-checker.md:21
+msgid "Total timeout for this run."
+msgstr ""
+
+#: src/qemu-checker.md:23
+msgid "Example"
+msgstr ""
+
+#: src/qemu-checker.md:24
+msgid ""
+"Suppose we have a kernel image for testing, named `blueos_foo_test`. First "
+"we have to generate a qemu runner script for it."
+msgstr ""
+
+#: src/qemu-checker.md:26
+msgid ""
+"```gn\n"
+"gen_qemu_runner(\"runner_for_blueos_foo_test\") {\n"
+"  img = \":blueos_foo_test\"\n"
+"  qemu = \"$qemu_exe\"\n"
+"  board = \"$board\"\n"
+"}\n"
+"```"
+msgstr ""
+
+#: src/qemu-checker.md:33
+msgid "Then, we make a checker for the above runner."
+msgstr ""
+
+#: src/qemu-checker.md:34
+msgid ""
+"```gn\n"
+"run_qemu_checker(\"check_blueos_foo_test\") {\n"
+"  img = \":blueos_foo_test\"\n"
+"  runner = \":runner_for_blueos_foo_test\"\n"
+"  checker = \"//kernel/kernel/tests/integration_test.rs\"\n"
+"}\n"
+"```"
+msgstr ""
+
+#: src/qemu-checker.md:41
+msgid ""
+"Must be noted, the above two targets must be put in the same `BUILD.gn`. "
+"Check directives should be put at the header of `integration_test.rs`."
+msgstr ""
+
+#: src/qemu-checker.md:44
+msgid ""
+"// NEWLINE-TIMEOUT: 15\n"
+"// ASSERT-SUCC: Kernel test end.\n"
+"// ASSERT-FAIL: Backtrace in Panic.*\n"
+msgstr ""
+
+#: src/qemu-checker.md:49
+msgid "Integrate checks in CI"
+msgstr ""
+
+#: src/qemu-checker.md:50
+msgid ""
+"CI runner only runs two toplevel targets, `default` and `check_all`. To run "
+"check during CI, you have to put your checker target in `deps` of "
+"`check_all` group in the toplevel `BUILD.gn`."
+msgstr ""
+
+#: src/qemu-checker.md:53
+msgid ""
+"```gn\n"
+"group(\"check_all\") {\n"
+"  deps = [ \":check_kernel\" ]\n"
+"}\n"
+"```"
+msgstr ""
+
+#: src/run-coverage.md:3
+msgid ""
+"We generate the code needed for coverage statistics by adding "
+"`-Cinstrument-coverage` during compilation, and generate coverage data "
+"through the integration of [minicov](https://crates.io/crates/minicov) and "
+"[semihosting](https://crates.io/crates/semihosting). Finally, we use the "
+"[grcov](https://crates.io/crates/grcov) tool to generate readable coverage "
+"data in HTML format. All of these have been integrated into our build "
+"system, and coverage data can be generated using the following commands："
+msgstr ""
+
+#: src/run-coverage.md:6
+msgid "'build_type=\"coverage\" board=\"qemu_riscv64\"'"
+msgstr ""
+
+#: src/run-coverage.md:10
+msgid "If you get a prompt that grcov is not found, you can install it via"
+msgstr ""
+
+#: src/run-coverage.md:15
+msgid ""
+"After building and running, you can find merged coverage report in the "
+"`./out/qemu_riscv64.cov/cov_report` directory. Open the `index.html` file in "
+"the directory to view the coverage data."
+msgstr ""
+
+#: src/add-new-syscall.md:3
+msgid "Adding a new syscall in the kernel is easy."
+msgstr ""
+
+#: src/add-new-syscall.md:5
+msgid "There are 3 steps."
+msgstr ""
+
+#: src/add-new-syscall.md:7
+msgid "Add new syscall number for the new syscall in `header/src/syscalls.rs`."
+msgstr ""
+
+#: src/add-new-syscall.md:14
+msgid "Implement the new syscall in `kernel/src/syscall_handlers/mod.rs`."
+msgstr ""
+
+#: src/add-new-syscall.md:16
+msgid ""
+"This is generally done via `define_syscall_handler!` if the syscall is "
+"trivial. For example"
+msgstr ""
+
+#: src/add-new-syscall.md:20
+msgid "// Implement your vfs read.\n"
+msgstr ""
+
+#: src/add-new-syscall.md:24
+msgid "Register the new syscall in `kernel/src/syscall_handlers/mod.rs`."
+msgstr ""
+
+#: src/add-new-syscall.md:26
+msgid "Add a new entry in `syscall_table!`. For example,"
+msgstr ""
+
+#: src/add-new-syscall.md:30
+msgid ""
+"Must be noted, the first operand **MUST** be the unqualified name of the "
+"`NR` enumeration."
+msgstr ""
+
+#: src/invoke-syscall.md:3
+msgid "The vivo BlueOS kernel offers two modes of invoking syscall."
+msgstr ""
+
+#: src/invoke-syscall.md:5
+msgid "Software interruption"
+msgstr ""
+
+#: src/invoke-syscall.md:7
+msgid ""
+"This is generally seen in most OS kernels to switch from user space to "
+"kernel space."
+msgstr ""
+
+#: src/invoke-syscall.md:9
+msgid "Direct invoking"
+msgstr ""
+
+#: src/invoke-syscall.md:11
+msgid "In this mode, syscall handlers are invoked directly via function calls."
+msgstr ""
+
+#: src/invoke-syscall.md:13
+msgid ""
+"In both modes, if you have to invoke a syscall, use the `bk_syscall!` macro "
+"in `blueos_scal` crate. For example,"
+msgstr ""
+
+#: src/invoke-syscall.md:23
+msgid ""
+"There is no need to change your code when switching to another mode. By "
+"default, SWI mode is used. If you want to use the direct invoking mode, what "
+"you have to do is passing `--cfg direct_syscall_handler` to build the kernel."
+msgstr ""
+
+#: src/infra-data-types.md:1
+msgid "Kernel's basic data types"
+msgstr ""
+
+#: src/infra-data-types.md:3
+msgid "Arc"
+msgstr ""
+
+#: src/infra-data-types.md:4
+msgid ""
+"A customized `Arc`(`infra/src/tinyarc.rs`), is implemented for the kernel. "
+"Compared to `alloc::sync::Arc`, there is no much difference, except it has "
+"only `strong_count` thus reduced its size and is friendly to embedded "
+"deivces. Also its memory layout is known to `blueos_infra`, so our "
+"instrusive list can cooperate with it easily."
+msgstr ""
+
+#: src/infra-data-types.md:12
+msgid "Intrusive list"
+msgstr ""
+
+#: src/infra-data-types.md:13
+msgid ""
+"`blueos_infra`'s ilist(`infra/src/list/typed_ilist.rs`) is typed and unsafe. "
+"It's like C-style's ilist, however we recommend developers not using it "
+"directly but with smart pointers. We implement `ArcList` ontop of the typed "
+"ilst with `Arc` mentioned above and guarantees safety."
+msgstr ""
+
