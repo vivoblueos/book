@@ -20,5 +20,5 @@ ninja -C out/qemu_mps2_an385.release check_all
 ## Args and their semantics.
 | arg        | semantics |
 | ---        | ---       |
-| build_type | debug/ release/ coverage/ profile |
+| build_type | Configuration for the build |
 | board      | Name of the board targeted to |
