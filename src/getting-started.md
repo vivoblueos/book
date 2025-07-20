@@ -76,7 +76,7 @@ Use following command to init the project.
 ```bash
 mkdir blueos-dev
 cd blueos-dev
-repo init -u git@github.com:vivoblueos/manifests.git -b master -m manifest.xml
+repo init -u git@github.com:vivoblueos/manifests.git -b main -m manifest.xml
 ```
 Then sync all repositories in the project.
 ```bash
