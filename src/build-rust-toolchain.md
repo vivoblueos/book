@@ -50,13 +50,13 @@ You must also install the host machine's standard library and LLVM tools.
 
 For Linux:
 ```bash
-./x.py install -i --stage 2 library/std --target x86_64-unknown-linux-gnu
+./x.py install -i --stage 1 library/std --target x86_64-unknown-linux-gnu
 cp -rav build/x86_64-unknown-linux-gnu/llvm/{bin,lib} ${DESTDIR}/usr/local
 ```
 
 For macOS:
 ```bash
-./x.py install -i --stage 2 library/std --target aarch64-apple-darwin
+./x.py install -i --stage 1 library/std --target aarch64-apple-darwin
 cp -rav build/aarch64-apple-darwin/llvm/{bin,lib} ${DESTDIR}/usr/local
 ```
 
