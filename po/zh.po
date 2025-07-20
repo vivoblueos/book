@@ -438,16 +438,16 @@ msgid "build_type"
 msgstr "构建类型"
 
 #: src/build-kernel.md:23
-msgid "debug/ release/ coverage/ profile"
-msgstr "debug/ release/ coverage/ profile"
+msgid "Configuration for the build"
+msgstr "构建使用的配置"
 
 #: src/build-kernel.md:24
 msgid "board"
-msgstr "板"
+msgstr "开发板"
 
 #: src/build-kernel.md:24
 msgid "Name of the board targeted to"
-msgstr "目标板名称"
+msgstr "目标开发板名称"
 
 #: src/config-rust-analyzer.md:1
 msgid "Use rust-analyzer in VSCode"
@@ -612,8 +612,8 @@ msgid ""
 "// ASSERT-FAIL: Backtrace in Panic.*\n"
 msgstr ""
 "// NEWLINE-TIMEOUT: 15  \n"
-"// ASSERT-SUCC: 内核测试结束。  \n"
-"// ASSERT-FAIL: 崩溃回溯信息：Panic.*"
+"// ASSERT-SUCC: Kernel test end.\n"
+"// ASSERT-FAIL: Backtrace in Panic.*\n"
 
 #: src/qemu-checker.md:49
 msgid "Integrate checks in CI"
