@@ -34,7 +34,6 @@ export DESTDIR=<choose-your-install-prefix>
 cd rust
 cp config.blueos.toml config.toml
 ./x.py install -i --stage 1 compiler/rustc
-./x.py install -i --stage 1 library/std --target x86_64-unknown-linux-gnu
 ./x.py install -i --stage 1 library/std --target aarch64-vivo-blueos-newlib
 ./x.py install -i --stage 1 library/std --target thumbv7m-vivo-blueos-newlibeabi
 ./x.py install -i --stage 1 library/std --target thumbv8m.main-vivo-blueos-newlibeabihf
