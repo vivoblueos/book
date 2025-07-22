@@ -1,7 +1,7 @@
 [book]
-title = "The vivo BlueOS kernel"
-author = "vivo BlueOS project Developers"
-description = "A development guide of the vivo BlueOS kernel"
+title = "BlueOS kernel"
+author = "vivo BlueOS Project Developers"
+description = "A development guide of BlueOS kernel"
 
 [build]
 create-missing = false

@@ -1,6 +1,6 @@
 # Invoke a syscall
 
-The vivo BlueOS kernel offers two modes of invoking syscall.
+BlueOS kernel offers two modes of invoking syscall.
 
 1. Software interruption
 

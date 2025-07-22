@@ -1,6 +1,6 @@
-# The vivo BlueOS kernel book
+# BlueOS kernel book
 
-This repository contains the source of "The vivo BlueOS kernel book".
+This repository contains the source of "BlueOS kernel book".
 
 ## Requirements
 Most parts of the BlueOS project are powered by Rust programming language, including this book.

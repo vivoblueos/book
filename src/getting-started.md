@@ -38,8 +38,8 @@ Add `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf/bin` and
 brew install gcc-arm-embedded llvm lld cmake ninja
 pip install kconfiglib
 ```
-For aarch64 toolchain, please have a look at [arm-gnu-toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads).
-For RISC-V toolchain on macOS, see [homebrew-riscv](https://github.com/riscv-software-src/homebrew-riscv?tab=readme-ov-file).
+For aarch64 toolchain, please refer to [arm-gnu-toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads).
+For RISC-V toolchain on macOS, please refer to [homebrew-riscv](https://github.com/riscv-software-src/homebrew-riscv?tab=readme-ov-file).
 
 ### Build and install QEMU
 Download QEMU source code tarball,

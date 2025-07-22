@@ -1,6 +1,6 @@
 # Use rust-analyzer in VSCode
 
-We recommend you to use rust-analyzer extension in VSCode to support development of the vivo BlueOS kernel.
+We recommend you to use rust-analyzer extension in VSCode to support development of BlueOS kernel.
 
 However, since we are using `gn`, rather than `Cargo.toml`, to manage our project, the rust-analyzer extension in VSCode might not work
 out-of-box. You should use following commands[^1] to get the extension work
