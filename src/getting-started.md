@@ -1,6 +1,6 @@
 # Getting Started
 
-We recommend you develop the kernel in Debian-12.0+ or Ubuntu-24.04+ environment to get the best tool support.
+We recommend you developing the kernel in Debian-12.0+ or Ubuntu-24.04+ environment to get the best tooling support.
 
 ## Prepare basic developement environment
 ### `repo`
