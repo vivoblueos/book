@@ -56,7 +56,7 @@ cp -rav build/x86_64-unknown-linux-gnu/llvm/{bin,lib} ${DESTDIR}/usr/local
 For macOS:
 ```bash
 ./x.py install -i --stage 1 library/std --target aarch64-apple-darwin
-cp -rav build/aarch64-apple-darwin/llvm/{bin,lib} ${DESTDIR}/usr/local
+cp -av build/aarch64-apple-darwin/llvm/{bin,lib} ${DESTDIR}/usr/local
 ```
 
 To use the kernel toolchain, add the following to your environment:

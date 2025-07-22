@@ -1,6 +1,6 @@
 # Getting Started
 
-We recommend you develop the kernel in Debian-12.0+ or Ubuntu-24.04+ environment to get the best tool support.
+We recommend you developing the kernel in Debian-12.0+ or Ubuntu-24.04+ environment to get the best tooling support.
 
 ## Prepare basic developement environment
 ### `repo`
@@ -33,15 +33,7 @@ tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz -C <install-p
 ```
 Add `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf/bin` and `<install-path>/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin` to your `$PATH`.
 
-### Install packages on macOS
-```bash
-brew install gcc-arm-embedded llvm lld cmake ninja
-pip install kconfiglib
-```
-For aarch64 toolchain, please refer to [arm-gnu-toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads).
-For RISC-V toolchain on macOS, please refer to [homebrew-riscv](https://github.com/riscv-software-src/homebrew-riscv?tab=readme-ov-file).
-
-### Build and install QEMU
+### Build and install QEMU on Linux
 Download QEMU source code tarball,
 ```bash
 wget https://download.qemu.org/qemu-10.0.2.tar.xz
@@ -52,6 +44,15 @@ mkdir build && cd build
     make -j$(nproc) install
 ```
 Add `<install-path>/bin` to your `$PATH`.
+
+### Install packages on macOS
+```bash
+brew install gcc-arm-embedded llvm lld cmake ninja qemu
+pip install kconfiglib
+```
+For aarch64 toolchain, please refer to [arm-gnu-toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads). It's
+recommended to download tarballs rather than pkgs.
+For RISC-V toolchain on macOS, please refer to [homebrew-riscv](https://github.com/riscv-software-src/homebrew-riscv?tab=readme-ov-file).
 
 ### Code formatters
 We are using code formatters of corresponding programming language to keep our code style consistent. These formatters can be installed via
