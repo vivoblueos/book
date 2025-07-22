@@ -1,7 +1,7 @@
-# Building the Rust toolchain for vivo BlueOS kernel
+# Building the Rust toolchain for BlueOS kernel
 
-We have forked upstream [Rust compiler](https://github.com/rust-lang/rust.git) to support the vivo BlueOS kernel
-targeted to `*-vivo-blueos-*` and vivo BlueOS kernel's Rust-std.
+We have forked upstream [Rust compiler](https://github.com/rust-lang/rust.git) to support BlueOS kernel
+targeted to `*-vivo-blueos-*` and BlueOS kernel's Rust-std.
 
 We'll finally contribute our changes to the upstream repository and make `*-vivo-blueos-*`
 a [tier](https://doc.rust-lang.org/rustc/target-tier-policy.html) Rust target.
