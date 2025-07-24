@@ -768,7 +768,7 @@ msgid ""
 "deivces. Also its memory layout is known to `blueos_infra`, so our "
 "instrusive list can cooperate with it easily."
 msgstr ""
-"为内核实现了一个定制的`Arc`(`infra/src/tinyarc.rs`)。与`alloc::sync::Arc`相比，差异不大，只是它仅有`strong_count`因而减小了体积，对嵌入式设备更友好。此外其内存布局对`blueos_infra`是已知的，因此我们的侵入式链表可以轻松与之协作。"
+"为内核实现了一个定制的`Arc`(`infra/src/tinyarc.rs`)。与`alloc::sync::Arc`相比，差异不大，只是它仅有`strong_count`因而减小了体积，对嵌入式设备更友好。此外其内存布局对`blueos_infra`是已知的，因此我们的侵入式列表可以轻松与之协作。"
 
 #: src/infra-data-types.md:12
 msgid "Intrusive list"
