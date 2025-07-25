@@ -8,21 +8,29 @@ a [tier](https://doc.rust-lang.org/rustc/target-tier-policy.html) Rust target.
 
 ## Clone the downstream repository
 Run
-```
-git clone git@github.com:vivoblueos/rust.git
-git clone git@github.com:vivoblueos/cc-rs.git
+If you have configured public ssh key on github, please use following commands,
+
+```bash
+git clone git@github.com:vivoblueos/rust.git  
+git clone git@github.com:vivoblueos/cc-rs.git  
 git clone git@github.com:vivoblueos/libc.git
+```  
+otherwise, please try
+```bash
+git clone https://github.com/vivoblueos/rust.git  
+git clone https://github.com/vivoblueos/cc-rs.git  
+git clone https://github.com/vivoblueos/libc.git 
 ```
 The `blueos-dev` branch is set as default, so no manual branch switching is required.
 
 ## Setup Rust mirror site
 In China, we recommend you to use mirror site for `crates.io` and `rustup`. Add following lines to your `~/.bashrc`
-```
+```bash
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 ```
 and then type
-```
+```bash
 source ~/.bashrc
 ```
 
