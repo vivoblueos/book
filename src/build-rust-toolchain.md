@@ -9,9 +9,9 @@ a [tier](https://doc.rust-lang.org/rustc/target-tier-policy.html) Rust target.
 ## Clone the downstream repository
 Run
 ```
-git clone git@github.com:vivoblueos/rust.git
-git clone git@github.com:vivoblueos/cc-rs.git
-git clone git@github.com:vivoblueos/libc.git
+git clone https://github.com/vivoblueos/rust.git
+git clone https://github.com/vivoblueos/cc-rs.git
+git clone https://github.com/vivoblueos/libc.git
 ```
 The `blueos-dev` branch is set as default, so no manual branch switching is required.
 
