@@ -25,7 +25,7 @@ sudo apt install build-essential cmake ninja-build pkg-config \
                  python3-kconfiglib
 ```
 Additionally, download and install arm toolchains
-```
+```bash
 wget https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz
 tar xvf arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz -C <install-path>
 wget https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-elf.tar.xz
@@ -77,6 +77,13 @@ Use following command to init the project.
 ```bash
 mkdir blueos-dev
 cd blueos-dev
+```
+Better rephrase to: If you have configured public ssh key on github, please use following commands
+```bash
+repo init -u git@github.com:vivoblueos/manifests.git -b main -m manifest.xml
+```
+otherwise, please try
+```bash
 repo init -u https://github.com/vivoblueos/manifests.git -b main -m manifest.xml
 ```
 Then sync all repositories in the project.
