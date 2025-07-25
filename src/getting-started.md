@@ -78,7 +78,7 @@ Use following command to init the project.
 mkdir blueos-dev
 cd blueos-dev
 ```
-Better rephrase to: If you have configured public ssh key on github, please use following commands
+If you have configured public ssh key on github, please use following commands
 ```bash
 repo init -u git@github.com:vivoblueos/manifests.git -b main -m manifest.xml
 ```

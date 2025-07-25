@@ -8,7 +8,7 @@ a [tier](https://doc.rust-lang.org/rustc/target-tier-policy.html) Rust target.
 
 ## Clone the downstream repository
 Run
-Better rephrase to: If you have configured public ssh key on github, please use following commands,
+If you have configured public ssh key on github, please use following commands,
 
 ```bash
 git clone git@github.com:vivoblueos/rust.git  
