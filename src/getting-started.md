@@ -22,7 +22,7 @@ sudo apt install build-essential cmake ninja-build pkg-config \
                  libslirp-dev python3 python3-pip meson \
                  libglib2.0-dev flex bison libfdt-dev \
                  gcc-riscv64-unknown-elf clang llvm lld \
-                 python3-kconfiglib
+                 python3-kconfiglib python3-tomli
 ```
 Additionally, download and install arm toolchains
 ```bash
@@ -47,8 +47,10 @@ Add `<install-path>/bin` to your `$PATH`.
 
 ### Install packages on macOS
 ```bash
-brew install gcc-arm-embedded llvm lld cmake ninja qemu
-pip install kconfiglib
+brew install coreutils llvm@19 lld@19 gcc-arm-embedded cmake ninja qemu
+brew tap riscv-software-src/riscv
+brew install riscv-tools riscv64-elf-gcc riscv64-elf-binutils riscv64-elf-gdb
+python3 -m pip install --user --break-system-packages --upgrade kconfiglib
 ```
 For aarch64 toolchain, please refer to [arm-gnu-toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads). It's
 recommended to download tarballs rather than pkgs.
