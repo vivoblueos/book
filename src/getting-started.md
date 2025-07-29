@@ -66,6 +66,7 @@ sudo apt install clang-format yapf3
 # On macOS
 brew install clang-format yapf
 ```
+
 Here's the table of format command and its corresponding programming language.
 | lang   | format command |
 | ----   | -------------- |
