@@ -22,7 +22,8 @@ sudo apt install build-essential cmake ninja-build pkg-config \
                  libslirp-dev python3 python3-pip meson \
                  libglib2.0-dev flex bison libfdt-dev \
                  gcc-riscv64-unknown-elf clang llvm lld \
-                 python3-kconfiglib python3-tomli
+                 python3-kconfiglib python3-tomli qemu-system-misc \
+                 qemu-system-arm
 ```
 Additionally, download and install arm toolchains
 ```bash
