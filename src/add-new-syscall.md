@@ -4,7 +4,7 @@ Adding a new syscall in the kernel is easy.
 
 There are 3 steps.
 
-1. Add new syscall number for the new syscall in `header/src/syscalls.rs`.
+1. Add new syscall number for the new syscall in `header/src/lib.rs`.
 ```rust
 pub enum NR {
     Read,
