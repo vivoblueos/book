@@ -6,6 +6,19 @@ description = "A development guide of BlueOS kernel"
 [build]
 create-missing = false
 
+[output.html]
+smart-punctuation = true
+additional-js = [
+  "theme/speaker-notes.js",
+]
+additional-css = [
+  "theme/css/svgbob.css",
+  "theme/css/redbox.css",
+  "theme/css/speaker-notes.css",
+  "theme/css/language-picker.css",
+  "theme/css/rtl.css",
+]
+
 [output.html.playground]
 editable = false
 copyable = true
