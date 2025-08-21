@@ -72,7 +72,7 @@ To use the kernel toolchain, add the following to your environment:
 export PATH=${DESTDIR}/usr/local/bin:${PATH}
 ```
 
-Or you want to manger blueos toolchain using rustup, you can:
+Or you want to mange the blueos toolchain using rustup, you can:
 ```bash
 ln -s ${DESTDIR}/usr/local ~/.rustup/toolchains/blueos-dev
 rustup default blueos-dev
