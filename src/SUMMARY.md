@@ -23,5 +23,4 @@
 ---
 
 # Contributing
-* [Code style guidelines]()
-* [Code of conduct]()
+* [Sumbit pull requests](./prs.md)
