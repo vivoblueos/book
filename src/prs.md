@@ -17,4 +17,6 @@ Do the same to the `build` repository.
 
 To trigger a build in CI, the developer has to issue following comment on the page of one of the PRs.
 
-> build_prs <url-of-the-kernel-pr> <url-of-the-build-pr>
+```
+build_prs <url-of-the-kernel-pr> <url-of-the-build-pr>
+```
