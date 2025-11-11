@@ -5,7 +5,7 @@ We have implemented a simple shell to demonstrate the functionality of the BlueO
 gn gen out/shell_test --args='board="qemu_mps2_an385" build_type="release"'
 ninja -C out/shell_test shell_runner
 ```
-The `ninja` will output severial lines, like
+The `ninja` will output a line at last, which is like
 ```
 Generated /build/vivoblueos/out/shell_test/bin/shell_runner-qemu.sh
 ```
