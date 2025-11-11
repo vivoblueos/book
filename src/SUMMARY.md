@@ -10,8 +10,7 @@
 * [Config rust-analyzer](./config-rust-analyzer.md)
 * [Use QEMU checker to test](./qemu-checker.md)
 * [Run Coverage](./run-coverage.md)
-
-# Install the kernel image to devices
+* [Run shell in QEMU](./run-shell.md)
 
 # Syscalls
 * [Add a new syscall](./add-new-syscall.md)
