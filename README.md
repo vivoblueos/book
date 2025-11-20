@@ -8,7 +8,7 @@ Please read [rustup](https://rustup.rs/) to install native Rust toolchain to con
 
 Then we are using [mdBook](https://github.com/rust-lang/mdBook) to build this book. `mdbook` can be installed via command
 ```bash
-cargo install mdbook
+cargo install mdbook --version 0.4.51
 ```
 
 ## Build the book
