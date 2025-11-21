@@ -48,6 +48,7 @@ cp config.blueos.toml config.toml
 ./x.py install -i --stage 1 library/std --target riscv64-vivo-blueos
 ./x.py install -i --stage 1 library/std --target riscv32-vivo-blueos
 ./x.py install -i --stage 1 library/std --target riscv32imc-vivo-blueos
+./x.py install -i --stage 0 cargo
 ./x.py install -i --stage 0 rustfmt
 ./x.py install -i --stage 0 rust-analyzer
 ./x.py install -i --stage 0 clippy
