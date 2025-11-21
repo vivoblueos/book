@@ -77,3 +77,9 @@ Or if you want to mange the blueos toolchain using rustup, you can try:
 ln -s ${DESTDIR}/usr/local ~/.rustup/toolchains/blueos-dev
 rustup default blueos-dev
 ```
+
+## Install extra tools
+`bindgen` and `cbindgen` are also required for building the kernel. Install them via
+```
+CARGO_INSTALL_ROOT=${DESTDIR}/usr/local cargo install bindgen-cli@0.72.1 cbindgen@0.29.0
+```
