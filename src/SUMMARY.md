@@ -11,6 +11,7 @@
 * [Use QEMU checker to test](./qemu-checker.md)
 * [Run Coverage](./run-coverage.md)
 * [Run shell in QEMU](./run-shell.md)
+* [Add third-party crates](./third-party.md)
 
 # Syscalls
 * [Add a new syscall](./add-new-syscall.md)
