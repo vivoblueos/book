@@ -4,7 +4,7 @@ We manage all third party crates in the https://github.com/vivoblueos/external r
 All crates are transformed into GN's `BUILD.gn` files via [gnrt](https://chromium.googlesource.com/chromium/src/+/HEAD/tools/crates/gnrt/) which is initially created by the Chromium project.
 
 ## Add dependency in `//external/Cargo.toml`
-To add a new third party crate, for example, [unwinding](https://crates.io/crates/unwinding). Add following code in `//external/Cargo.toml`
+To add a new third party crate, for example [unwinding](https://crates.io/crates/unwinding), add following code in `//external/Cargo.toml`
 ```toml
 [dependencies.unwinding]
 version = "=0.2.4"
