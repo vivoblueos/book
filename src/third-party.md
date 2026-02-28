@@ -5,7 +5,7 @@ All crates are transformed into GN's `BUILD.gn` files via [gnrt](https://chromiu
 
 ## Add dependency in `//external/Cargo.toml`
 To add a new third party crate, for example [unwinding](https://crates.io/crates/unwinding), add following code in `//external/Cargo.toml`
-```toml
+```
 [dependencies.unwinding]
 version = "=0.2.4"
 default-features = false
