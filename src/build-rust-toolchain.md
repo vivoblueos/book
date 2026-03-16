@@ -48,6 +48,7 @@ cp config.blueos.toml config.toml
 ./x.py install -i --stage 1 library/std --target riscv64-vivo-blueos
 ./x.py install -i --stage 1 library/std --target riscv32-vivo-blueos
 ./x.py install -i --stage 1 library/std --target riscv32imc-vivo-blueos
+./x.py install -i --stage 0 cargo
 ./x.py install -i --stage 0 rustfmt
 ./x.py install -i --stage 0 rust-analyzer
 ./x.py install -i --stage 0 clippy
@@ -76,4 +77,10 @@ Or if you want to mange the blueos toolchain using rustup, you can try:
 ```bash
 ln -s ${DESTDIR}/usr/local ~/.rustup/toolchains/blueos-dev
 rustup default blueos-dev
+```
+
+## Install extra tools
+`bindgen` and `cbindgen` are also required for building the kernel. Install them via
+```
+CARGO_INSTALL_ROOT=${DESTDIR}/usr/local cargo install bindgen-cli@0.72.1 cbindgen@0.29.0
 ```
