@@ -1,0 +1,7 @@
+org = "vivoblueos"
+upstream-repo = "vivoblueos/blueos"
+upstream-branch = "main"
+
+repo = "book"
+path = "book"
+filter-version = 2
