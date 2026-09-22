@@ -7,8 +7,14 @@
 set -x
 set -e
 
-# Fill API key of deepseek.
-#export DEEPSEEK_API_KEY=
+# DEEPSEEK_API_KEY must be exported in your shell environment (e.g. via a
+# secrets manager or `export DEEPSEEK_API_KEY=...` typed directly at the
+# prompt) before running this script. Do NOT hardcode the key in this file,
+# as that risks exposure via shell history and version control.
+if [ -z "${DEEPSEEK_API_KEY}" ]; then
+  echo "Error: DEEPSEEK_API_KEY environment variable is not set." >&2
+  exit 1
+fi
 
 MDBOOK_OUTPUT='{"xgettext": {}}' mdbook build -d po
 msginit -i po/messages.pot -l zh -o po/zh.po --no-translator
