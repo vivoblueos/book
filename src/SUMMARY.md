@@ -23,4 +23,5 @@
 ---
 
 # Contributing
+* [How to use the blueos repository](./how-to-use-blueos-repo.md)
 * [Submit pull requests](./prs.md)
