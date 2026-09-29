@@ -1,22 +1,19 @@
 # Submit pull requests
 
-As mentioned before, we are using `repo` to manage the project, sometimes developer's change might be involved in more than one repositories.
-We recommend developers to use following workflow to submit PRs.
+## New work
 
-Assume a developer has to change code in `kernel` and `build` repositories. The developer first has to fork the both repositories. Then add new
-`remote` for the both repositories. For example
-```bash
-git remote add <user> git@github.com:<user>/kernel
-git checkout -b feature-x
-# Change code and commit.
-git push <user>
-```
-Then create a new PR for the `kernel` repository.
+Fork [vivoblueos/blueos](https://github.com/vivoblueos/blueos) and submit a PR
+using the usual GitHub workflow.
 
-Do the same to the `build` repository.
+## Existing component PRs
 
-To trigger a build in CI, the developer has to issue following comment on the page of one of the PRs.
+For an existing component branch or unmerged PR, follow
+[How to use the blueos repository](./how-to-use-blueos-repo.md) to import
+the branch and integrate it with the complete central history before
+continuing development and publishing a central PR. Include any unmerged
+dependencies in the same central branch.
 
-```
-build_prs <url-of-the-kernel-pr> <url-of-the-build-pr>
-```
+After publishing the replacement central PR, close the original component
+PR and link to the replacement to avoid merging the same work twice. If
+the original branch is shared, agree on the migration and where further
+development will take place first.
