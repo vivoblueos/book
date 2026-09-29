@@ -7,10 +7,7 @@
 set -x
 set -e
 
-# Fill API key of deepseek.
-#export DEEPSEEK_API_KEY=
-
 MDBOOK_OUTPUT='{"xgettext": {}}' mdbook build -d po
 msginit -i po/messages.pot -l zh -o po/zh.po --no-translator
-gpt-po-translator --lang zh --folder po/ --model deepseek-chat --bulk \
+gpt-po-translator --lang zh --folder po/ --model deepseek-flash --bulk \
                   --no-ai-comment
