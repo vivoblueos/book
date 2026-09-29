@@ -6,10 +6,16 @@ This repository contains the source of "BlueOS kernel book".
 Most parts of the BlueOS project are powered by Rust programming language, including this book.
 Please read [rustup](https://rustup.rs/) to install native Rust toolchain to continue.
 
-Then we are using [mdBook](https://github.com/rust-lang/mdBook) to build this book. `mdbook` can be installed via command
+We use [mdBook](https://github.com/rust-lang/mdBook) and
+[mdbook-i18n-helpers](https://github.com/google/mdbook-i18n-helpers) to build this book.
+Install mdBook 0.5.4 and the latest published mdbook-i18n-helpers, as CI does:
 ```bash
-cargo install mdbook
+cargo install mdbook --version 0.5.4 --locked
+cargo install mdbook-i18n-helpers --locked
 ```
+
+CI pins mdBook and tracks new mdbook-i18n-helpers releases so compatibility issues surface during builds.
+`--locked` uses each package's published dependency lockfile; it does not pin the tool version.
 
 ## Build the book
 To build the book, run
