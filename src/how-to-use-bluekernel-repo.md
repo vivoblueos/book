@@ -1,4 +1,4 @@
-# How to use the blueos repository
+# How to use the bluekernel repository
 
 ## Relationship with the component repositories
 
@@ -11,7 +11,7 @@ repository with its own branches, commit history, and pull requests (PRs).
 Changes spanning several repositories required a branch and a PR in each
 repository, making review and CI validation harder to coordinate.
 
-The blueos repository brings these components together. Its component paths
+The bluekernel repository brings these components together. Its component paths
 match those in the workspace created with `repo init`, and Josh preserves
 the imported commit history.
 
@@ -55,7 +55,7 @@ cargo +stable install josh-cli --locked \
     --tag r26.07.19
 ```
 
-Use a standard Rust toolchain for installation rather than blueos's custom
+Use a standard Rust toolchain for installation rather than bluekernel's custom
 Cargo.
 
 ### Configure remotes and fetch branches
@@ -99,14 +99,14 @@ way, changing the remote name and URL.
 development branch or integrate the imported branch into the full central
 history.
 
-## Integrate imported branches with the complete blueos repository
+## Integrate imported branches with the complete bluekernel repository
 
 An imported branch contains only its component's files. Integrate it with
 the central history containing all components before using it as a complete
 central branch and publishing a central PR.
 
 The early central history imported the component repositories in stages.
-In `vivoblueos/blueos`, the commit completing these initial imports is
+In `vivoblueos/bluekernel`, the commit completing these initial imports is
 `a0d6549f6078a624dc513d4d2a34f5cf47e02f13`. Usually start from the central
 `main` or a central branch that already integrates the previous imports.
 After integration, check that the initial import commit is an ancestor:
@@ -137,10 +137,10 @@ git rebase --onto main fork-build/main
 # The result can now be used as a complete central branch.
 
 # Add kernel's changes on top of the previous result.
-git switch -c blueos/miri/allocator-rebased fork-kernel/miri/allocator
+git switch -c bluekernel/miri/allocator-rebased fork-kernel/miri/allocator
 git rebase --onto import/build-miri-rebased fork-kernel/main
 
-git push origin blueos/miri/allocator-rebased
+git push origin bluekernel/miri/allocator-rebased
 ```
 
 ### Integrate with merge
@@ -161,14 +161,14 @@ python3 tools/josh/merge-subtree-branches.py \
     --source-remote fork-build \
     --source-branch miri/allocator \
     --target-base main \
-    --target-branch blueos/miri/allocator
+    --target-branch bluekernel/miri/allocator
 
 python3 tools/josh/merge-subtree-branches.py \
     --repo kernel \
     --source-remote fork-kernel \
     --source-branch miri/allocator \
-    --target-base blueos/miri/allocator \
-    --target-branch blueos/miri/allocator
+    --target-base bluekernel/miri/allocator \
+    --target-branch bluekernel/miri/allocator
 ```
 
 | Parameter | Meaning |
@@ -207,7 +207,7 @@ with `push-subtree-branch.py`.
 # Add --push for an actual push, and --force for non-fast-forward updates.
 python3 tools/josh/push-subtree-branch.py \
     --source-base main \
-    --source-rev blueos/miri/allocator \
+    --source-rev bluekernel/miri/allocator \
     --repo build \
     --target-remote fork-build \
     --target-base main \
@@ -254,7 +254,7 @@ First preview the build export:
 ```bash
 python3 tools/josh/push-subtree-branch.py \
     --source-base main \
-    --source-rev blueos/miri/allocator \
+    --source-rev bluekernel/miri/allocator \
     --repo build \
     --target-remote fork-build \
     --target-base main \
@@ -268,7 +268,7 @@ and remote:
 ```bash
 python3 tools/josh/push-subtree-branch.py \
     --source-base main \
-    --source-rev blueos/miri/allocator \
+    --source-rev bluekernel/miri/allocator \
     --repo kernel \
     --target-remote fork-kernel \
     --target-base main \
@@ -305,7 +305,7 @@ force-push the build branch:
 ```bash
 python3 tools/josh/push-subtree-branch.py \
     --source-base main \
-    --source-rev blueos/miri/allocator \
+    --source-rev bluekernel/miri/allocator \
     --repo build \
     --target-remote fork-build \
     --target-base main \
@@ -322,8 +322,8 @@ are stored in `refs/export/<remote>/<target-branch>`. Range mode also uses
 on each invocation and do not track push progress together with the import
 script.
 
-The examples use the merge result `blueos/miri/allocator`. If you followed
-the rebase workflow, use `--source-rev blueos/miri/allocator-rebased` instead.
+The examples use the merge result `bluekernel/miri/allocator`. If you followed
+the rebase workflow, use `--source-rev bluekernel/miri/allocator-rebased` instead.
 
 ### Export the full history
 
@@ -332,7 +332,7 @@ parameters and specify only `--source-rev`:
 
 ```bash
 python3 tools/josh/push-subtree-branch.py \
-    --source-rev blueos/miri/allocator \
+    --source-rev bluekernel/miri/allocator \
     --repo build \
     --target-remote fork-build \
     --target-branch miri/allocator
@@ -365,8 +365,8 @@ python3 tools/josh/merge-subtree-branches.py \
     --repo build \
     --source-remote fork-build \
     --source-branch miri/allocator \
-    --target-base blueos/miri/allocator \
-    --target-branch blueos/miri/allocator
+    --target-base bluekernel/miri/allocator \
+    --target-branch bluekernel/miri/allocator
 ```
 
 The script fetches, maps, and merges the source. With the rebase workflow,
@@ -389,14 +389,14 @@ integration.
 See [Josh branch tools][josh] for the complete parameters and helper ref
 behavior of both scripts.
 
-[josh]: https://github.com/vivoblueos/blueos/blob/main/tools/josh/README.md
+[josh]: https://github.com/vivoblueos/bluekernel/blob/main/tools/josh/README.md
 
 ## Appendix
 
 ### Import component branches
 
 ```bash
-cd blueos
+cd bluekernel
 josh remote add upstream-apps_example \
     https://github.com/vivoblueos/apps_example.git ':prefix=apps/example'
 josh remote add upstream-apps_shell \
