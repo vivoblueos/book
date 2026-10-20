@@ -13,5 +13,5 @@ features = [
     "unwinder"
 ]
 ```
-Then run `ninja -C <out> run_gnrt`.
-After the above two steps, developers can add `//external/vendor/unwinding-0.2.4:unwinding` to the `deps` field in the target defintions in `BUILD.gn`.
+The generated GN rules are checked in under `//external/vendor/`.
+Targets can depend on those rules, for example by adding `//external/vendor/unwinding-0.2.4:unwinding` to the `deps` field in `BUILD.gn`.
