@@ -1,7 +1,7 @@
 # Add third party crates
 
 We manage third-party Rust dependencies with GNRT.
-All crates are transformed into GN's `BUILD.gn` files via [gnrt](../../external/gnrt),
+All crates are transformed into GN's `BUILD.gn` files via [gnrt](https://github.com/vivoblueos/kernel/tree/main/external/gnrt),
 which was originally developed by the Chromium project.
 
 Declare Rust dependencies in `external/rust/BUILD.gn` or another file listed in
